@@ -1,0 +1,72 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Navigation */
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default {
+  background-color: #FFF3F3;
+  /*background-color: #E3E4E5;*/
+}
+.navbar .container-fluid {
+  height: 100px;
+  display: inline;
+}
+
+.navbar .container-fluid a {
+  font-size: 26px;
+  cursor: pointer;
+  color: #253039;
+}
+
+.navbar .container-fluid a:hover {
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  width: 30px;
+  margin: 0 10px 0 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+/* Homepage */
+.container-fluid.home {
+  padding: 0;
+  /*text-align: center;*/
+}
+
+.home .jumbotron {
+  display: inline-block;
+  background-color: #FFF3F3;
+}
+
+.home .jumbotron img {
+  width: 200px;
+}
+
+.home .subtext {
+text-align: left;
+}
+
+.home .actions {
+  margin: 30px 0;
+}
+
+.home .actions p a:hover {
+  text-decoration: none;
+}

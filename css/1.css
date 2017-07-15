@@ -1,0 +1,21 @@
+/* Profile */
+.profile-pic {
+  width: 200px;
+  border-radius: 50%;
+}
+
+p span {
+  font-weight: bold;
+}
+
+.progress {
+  margin-top: 20px;
+}
+
+button {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.profile-details {
+}
