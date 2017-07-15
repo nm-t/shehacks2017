@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Make it Rain</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/5.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container theme-showcase" role="main">
+		<h2 align="center">How much do you want to save for your %goal%?</h2>
+	</div>
+
+	<div class="container">
+
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="input-group">
+				<span class="input-group-addon">$</span>
+				<input type="text" class="form-control" aria-label="Amount (to the 	nearest dollar)"></span>
+			</div>
+		</div>
+	</div>
+
+		<div class="price-box">
+
+			<form class="form-horizontal form-pricing" role="form">
+
+				<div class="price-slider">
+					<h4 class="great">Current spend</h4>
+					<span>per week</span>
+					<div class="col-sm-12">
+						<div id="slider"></div>
+					</div>
+				</div>
+
+				<div>
+					<h2>Current savings</h2>
+					<div id="currSavings"><p>1000</p></div>
+				</div>
+
+				<div class="price-form">
+
+				  <div class="form-group">
+				    <label for="amount" class="col-sm-6 control-label">Amount ($): </label>
+				    <span class="help-text">Please choose your amount</span>
+				    <div class="col-sm-6">
+				      <input type="hidden" id="amount" class="form-control">
+				      <p class="price lead" id="amount-label"></p>
+				      <span class="price">.00</span>
+				    </div>
+				  </div>
+
+				</div>
+
+				<div class="form-group">
+				  <div class="col-sm-12">
+				    <button type="submit" class="btn btn-primary btn-lg btn-block">Proceed <span class="glyphicon glyphicon-chevron-right pull-right" style="padding-right: 10px;"></span></button>
+				  </div>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/5.js"></script>
+</body>
+</html>
