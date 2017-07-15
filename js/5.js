@@ -3,23 +3,23 @@ $(document).ready(function() {
               animate: true,
               value:1,
               min: 0,
-              max: 1000,
-              step: 10,
+              max: 20,
+              step: 1,
               slide: function(event, ui) {
                   update(1,ui.value); //changed
               }
           });
 
-          $("#slider2").slider({
-              animate: true,
-              value:0,
-              min: 0,
-              max: 500,
-              step: 1,
-              slide: function(event, ui) {
-                  update(2,ui.value); //changed
-              }
-          });
+      //     $("#slider2").slider({
+      //         animate: true,
+      //         value:0,
+      //         min: 0,
+      //         max: 500,
+      //         step: 1,
+      //         slide: function(event, ui) {
+      //             update(2,ui.value); //changed
+      //         }
+      //     });
 
           //Added, set initial value.
           $("#amount").val(0);
@@ -41,11 +41,11 @@ $(document).ready(function() {
         $duration = $( "#slider2" ).slider( "value" );
          */
 
-         $total = "$" + ($amount * $duration);
+         $total = ($amount * 365);
          $( "#amount" ).val($amount);
-         $( "#amount-label" ).text($amount);
+         $( "#amount-label" ).text($amount * 4);
          $( "#duration" ).val($duration);
-         $( "#duration-label" ).text($duration);
+         $( "#duration-label" ).text($amount * 30);
          $( "#total" ).val($total);
          $( "#total-label" ).text($total);
 
