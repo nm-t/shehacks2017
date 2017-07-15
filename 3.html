@@ -2,32 +2,38 @@
 <html lang="en">
 
 <head>
-	<title>Make it Rain</title>
+	<title>Feeling Fancy</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/5.css" rel="stylesheet">
+	<link href="css/3.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<a class="logo" href="index.html">
+				<img src="img/feeling-financy-logo.svg">
+				Feeling Financy
+			</a>
+		</div>
+	</nav>
 	<div class="container theme-showcase" role="main">
-		<h2 align="center">How much do you want to save for your %goal%?</h2>
+		<h2 align="center">How much do you want to save for your goal?</h2>
 	</div>
-
 	<div class="container">
-
-	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6">
-			<div class="input-group">
-				<span class="input-group-addon">$</span>
-				<input type="text" class="form-control" aria-label="Amount (to the 	nearest dollar)"></span>
+		<div class="row goal-input">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+					<input type="text" class="form-control" aria-label="Amount (to the 	nearest dollar)"></span>
+				</div>
 			</div>
 		</div>
-	</div>
 
 		<div class="price-box">
 
 			<form class="form-horizontal form-pricing" role="form">
-
 				<div class="price-slider">
 					<h4 class="great">Current spend</h4>
 					<span>per week</span>
@@ -36,6 +42,7 @@
 					</div>
 				</div>
 
+				<!-- TODO: Fix slider calculations with current spend -->
 				<div>
 					<h2>Current savings</h2>
 					<div id="currSavings"><p>1000</p></div>
@@ -52,12 +59,11 @@
 				      <span class="price">.00</span>
 				    </div>
 				  </div>
-
 				</div>
 
 				<div class="form-group">
 				  <div class="col-sm-12">
-				    <button type="submit" class="btn btn-primary btn-lg btn-block">Proceed <span class="glyphicon glyphicon-chevron-right pull-right" style="padding-right: 10px;"></span></button>
+				    <a href="4.html" class="btn btn-primary btn-lg btn-block">Proceed <span class="glyphicon glyphicon-chevron-right pull-right" style="padding-right: 10px;"></span></a>
 				  </div>
 				</div>
 
