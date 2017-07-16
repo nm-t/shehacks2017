@@ -7,9 +7,13 @@
 	<link href="css/5.css" rel="stylesheet">
 	<link href="css/3.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link id="bsdp-css" href="bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 </head>
 
 <body>
+
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<a class="logo" href="index.html">
@@ -19,42 +23,64 @@
 		</div>
 	</nav>
 	<div class="container theme-showcase" role="main">
-		<h2 align="center">How much do you want to save for your goal?</h2>
+		<h2 align="center">Let's have a look...</h2>
 	</div>
 	<div class="container">
-		<div class="row goal-input">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="input-group">
-					<span class="input-group-addon">$</span>
-					<input type="text" class="form-control" aria-label="Amount (to the 	nearest dollar)"></span>
-				</div>
-			</div>
-		</div>
 
 		<div class="price-box">
 
 			<form class="form-horizontal form-pricing" role="form">
+
+				<div>
+					<h4>How much do you want to save for your goal?</h4>
+					<div class="row goal-input">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="input-group">
+								<span class="input-group-addon">$</span>
+								<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h4>By when?</h4>
+					<div class="input-group date" data-provide="datepicker">
+						<input type="text" class="form-control">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</div>
+					</div>
+				</div>
+
 				<div class="price-slider">
-					<h4 class="great">Current spend</h4>
-					<span>per week</span>
+					<h4>Income per week</h4>
 					<div class="col-sm-12">
 						<div id="slider"></div>
 					</div>
 				</div>
 
-				<!-- TODO: Fix slider calculations with current spend -->
-				<div>
-					<h2>Current savings</h2>
-					<div id="currSavings"><p>1000</p></div>
+				<div class="price-slider">
+					<h4>Spend per week</h4>
+					<div class="col-sm-12">
+						<div id="slider2"></div>
+					</div>
 				</div>
+
+				<!-- TODO: Fix slider calculations with current spend -->
 
 				<div class="price-form">
 
 				  <div class="form-group">
-				    <label for="amount" class="col-sm-6 control-label">Amount ($): </label>
-				    <span class="help-text">Please choose your amount</span>
+				    <label for="amount" class="col-sm-6 control-label">Okay! You'll need to save this much per week:</label>
 				    <div class="col-sm-6">
 				      <input type="hidden" id="amount" class="form-control">
+				      <p class="price lead" id="amount-label"></p>
+				      <span class="price">.00</span>
+				    </div>
+				    <label for="amount" class="col-sm-6 control-label">By the way, you'll get this much back in pocket:</label>
+				    <div class="col-sm-6">
+				      <input type="hidden" id="amount2" class="form-control">
 				      <p class="price lead" id="amount-label"></p>
 				      <span class="price">.00</span>
 				    </div>
@@ -76,6 +102,6 @@
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/5.js"></script>
+	<script src="js/3.js"></script>
 </body>
 </html>

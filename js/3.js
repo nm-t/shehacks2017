@@ -23,10 +23,10 @@ $(document).ready(function() {
 
           //Added, set initial value.
           $("#amount").val(0);
-          $("#currSavings").val(0);
+          $("#duration").val(0);
           $("#amount-label").text(0);
-          $("#currSavings-label").text(0);
-
+          $("#duration-label").text(0);
+          
           update();
       });
 
@@ -34,18 +34,18 @@ $(document).ready(function() {
       function update(slider,val) {
         //changed. Now, directly take value from ui.value. if not set (initial, will use current value.)
         var $amount = slider == 1?val:$("#amount").val();
-        var $currSavings = slider == 2?val:$("#currSavings").val();
+        var $duration = slider == 2?val:$("#duration").val();
 
         /* commented
         $amount = $( "#slider" ).slider( "value" );
-        $currSavings = $( "#slider2" ).slider( "value" );
+        $duration = $( "#slider2" ).slider( "value" );
          */
 
-         $total = "$" + ($amount * $currSavings);
+         $total = "$" + ($amount * $duration);
          $( "#amount" ).val($amount);
          $( "#amount-label" ).text($amount);
-         $( "#currSavings" ).val($currSavings);
-         $( "#currSavings-label" ).text($currSavings);
+         $( "#duration" ).val($duration);
+         $( "#duration-label" ).text($duration);
          $( "#total" ).val($total);
          $( "#total-label" ).text($total);
 
