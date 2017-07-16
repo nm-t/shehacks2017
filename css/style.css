@@ -2,6 +2,10 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+body.index {
+  background-color: #FFF3F3;
+}
+
 th, td {
   padding: 15px;
 }
@@ -13,8 +17,8 @@ th, td {
 
 .navbar-default {
   background-color: #FFF3F3;
-  /*background-color: #E3E4E5;*/
 }
+
 .navbar .container-fluid {
   height: 100px;
   display: inline;
@@ -64,7 +68,8 @@ p {
 }
 
 .home .subtext {
-text-align: left;
+  text-align: left;
+  padding: 0 100px;
 }
 
 .home .actions {

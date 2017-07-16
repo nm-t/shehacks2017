@@ -46,7 +46,7 @@ $(document).ready(function() {
 
          $total = "$" + ($amount * $duration);
          $( "#amount" ).val($amount);
-         $( "#amount-label" ).text($goal - $amount - $duration);
+         $( "#amount-label" ).text($amount - $duration);
          $( "#duration" ).val($duration);
          $( "#duration-label" ).text(Math.ceil(($goal - $amount - $duration)/5));
          $( "#total" ).val($total);
