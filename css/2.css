@@ -11,6 +11,10 @@
   border-radius: 50%;
 }
 
+.option img:hover {
+  cursor: pointer;
+}
+
 .search {
   margin: 50px 0;
 }
