@@ -37,7 +37,7 @@
 						<div class="col-md-6 col-md-offset-3">
 							<div class="input-group">
 								<span class="input-group-addon">$</span>
-								<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"></span>
+								<input id="goal" type="text" class="form-control" aria-label="Amount (to the nearest dollar)"></span>
 							</div>
 						</div>
 					</div>
@@ -46,28 +46,25 @@
 				<div>
 					<h4>By when?</h4>
 					<div class="input-group date" data-provide="datepicker">
-						<input type="text" class="form-control">
+						<input id="date" type="text" class="form-control">
 						<div class="input-group-addon">
 							<span class="glyphicon glyphicon-th"></span>
 						</div>
 					</div>
 				</div>
 
-				<div class="price-slider">
-					<h4>Income per week</h4>
+				<div class="price-slider margin-top">
+					<h4 class="great">Income per week</h4>
 					<div class="col-sm-12">
 						<div id="slider"></div>
 					</div>
 				</div>
-
 				<div class="price-slider">
-					<h4>Spend per week</h4>
+					<h4 class="great">Spend per week</h4>
 					<div class="col-sm-12">
 						<div id="slider2"></div>
 					</div>
 				</div>
-
-				<!-- TODO: Fix slider calculations with current spend -->
 
 				<div class="price-form">
 
@@ -78,10 +75,10 @@
 				      <p class="price lead" id="amount-label"></p>
 				      <span class="price">.00</span>
 				    </div>
-				    <label for="amount" class="col-sm-6 control-label">By the way, you'll get this much back in pocket:</label>
+				    <label for="duration" class="col-sm-6 control-label">By the way, you'll get this much back in pocket:</label>
 				    <div class="col-sm-6">
-				      <input type="hidden" id="amount2" class="form-control">
-				      <p class="price lead" id="amount-label"></p>
+				      <input type="hidden" id="duration" class="form-control">
+				      <p class="price lead" id="duration-label"></p>
 				      <span class="price">.00</span>
 				    </div>
 				  </div>
