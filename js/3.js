@@ -23,10 +23,11 @@ $(document).ready(function() {
 
           //Added, set initial value.
           $("#amount").val(0);
+          $("#amount2").val(0);
           $("#duration").val(0);
           $("#amount-label").text(0);
           $("#duration-label").text(0);
-          
+
           update();
       });
 
@@ -35,17 +36,19 @@ $(document).ready(function() {
         //changed. Now, directly take value from ui.value. if not set (initial, will use current value.)
         var $amount = slider == 1?val:$("#amount").val();
         var $duration = slider == 2?val:$("#duration").val();
+        console.log('duration', $duration);
+        var $goal = $('#goal').val();
+        console.log($goal);
 
-        /* commented
-        $amount = $( "#slider" ).slider( "value" );
-        $duration = $( "#slider2" ).slider( "value" );
-         */
+      //   TODO: Get real date value
+        var $date = $('#date').val();
+        console.log($date);
 
          $total = "$" + ($amount * $duration);
          $( "#amount" ).val($amount);
-         $( "#amount-label" ).text($amount);
+         $( "#amount-label" ).text($goal - $amount  - $duration);
          $( "#duration" ).val($duration);
-         $( "#duration-label" ).text($duration);
+         $( "#duration-label" ).text($goal - $duration);
          $( "#total" ).val($total);
          $( "#total-label" ).text($total);
 
