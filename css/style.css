@@ -2,6 +2,10 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+th, td {
+  padding: 15px;
+}
+
 /* Navigation */
 .navbar {
   border-radius: 0;
