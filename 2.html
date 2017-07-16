@@ -22,22 +22,22 @@
 
 		<div class="row options">
 			<div class="col-xs-4 option">
-				<img src="img/travel.jpg"><br/>
+				<img src="img/travel.jpg" class="shake"><br/>
 				<p>Travel</p>
 			</div>
 			<div class="col-xs-4 option">
-				<img src="img/invest.jpg"><br/>
+				<img src="img/invest.jpg" class="shake"><br/>
 				<p>Invest</p>
 			</div>
 			<div class="col-xs-4 option">
-				<img src="img/mortgage.jpg"><br/>
+				<img src="img/mortgage.jpg" class="shake"><br/>
 				<p>Mortgage</p>
 			</div>
 		</div>
 
 		<div class="row search">
 			<div class="col-xs-6 col-xs-offset-3 option">
-				<img src="img/question.png">
+				<img src="img/question.png" class="shake">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search for... New Ferrari">
 					<span class="input-group-btn">
@@ -51,5 +51,14 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+	<script>
+		$(function(){
+	   	$(".shake").hover(function() {
+	         $(this).effect("shake", {direction: "up", times: 2, distance: 5}, 500);
+	   });
+		});
+	</script>
 </body>
 </html>

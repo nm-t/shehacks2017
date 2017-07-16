@@ -21,21 +21,30 @@
       <div class="row options">
         <div class="col-xs-4 option">
           <a href="5.html">
-            <img src="img/coffee.png"><br/>
+            <img src="img/coffee.png" class="shake"><br/>
           </a>
           <p>Give up a habit</p>
         </div>
         <div class="col-xs-4 option">
-          <img src="img/savings.jpg"><br/>
+          <img src="img/savings.jpg" class="shake"><br/>
           <p>Open a high interest savings account</p>
         </div>
         <div class="col-xs-4 option">
-          <img src="img/budget.png"><br/>
+          <img src="img/budget.png" class="shake"><br/>
           <p>Make a budget</p>
         </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  	<!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+  	<script>
+  		$(function(){
+  	   	$(".shake").hover(function() {
+  	         $(this).effect("shake", {direction: "up", times: 2, distance: 5}, 500);
+  	   });
+  		});
+  	</script>
   </body>
 </html>
