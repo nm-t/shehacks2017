@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Feeling Fancy</title>
+    <title>Feeling Financy</title>
+    <link rel="shortcut icon" href="img/piggy.ico" type="image/x-icon">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -15,7 +17,7 @@
       </div>
     </nav>
     <div class="container theme-showcase" role="main">
-      <h2 align="center">Welcome back, Georgie!</h2>
+      <h2 align="center">Hell yeah!</h2>
       <script src="http://code.highcharts.com/highcharts.js"></script>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -36,26 +38,46 @@
                text: 'Savings ($)'
            }
        },
+       xAxis: {        
+           type: 'datetime',
+           labels: {
+               formatter: function() {
+                   return Highcharts.dateFormat('%d %b %Y', this.value);
+               }
+           }
+       },
        legend: {
            layout: 'vertical',
            align: 'right',
            verticalAlign: 'middle'
        },
 
+       tooltip: {
+          crosshairs: {
+              color: 'pink',
+              dashStyle: 'solid'
+          },
+          shared: true
+        },
+
        plotOptions: {
            series: {
-               data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-               pointStart: Date.UTC(2010, 0, 1),
-               pointInterval: 3600 * 1000 // one hour
+               data: [Date.UTC(2017, 8, 16)],
+               pointStart: Date.UTC(2017, 7, 16),
+               pointInterval: 24 * 3600 * 1000, // one day
+               compare: 'percent'
            }
        },
 
        series: [{
-           name: 'Save that money',
-           data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+           name: 'Coffee who?',
+           color: '#E4A19D',
+           data: [500, 475.43, 479.43, 483.43, 487.43, 791.43, 495.43, 499.43, 503.43, 507.43, 511.43, 515.43, 819.43, 523.43, 527.43, 531.43, 535.43, 539.43, 543.43, 847.43, 551.43, 555.43]
        }, {
-           name: 'Nah whatever',
-           data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+           name: 'I need the caffeine',
+           color: '#aaaaaa',
+           dashStyle: 'LongDash',
+           data: [500, 471.43, 471.43, 471.43, 471.43, 771.43, 471.43, 471.43, 471.43, 471.43, 471.43, 471.43, 771.43, 471.43, 471.43, 471.43, 471.43, 471.43, 471.43, 771.43, 471.43, 471.43]
        },]
 
     });
