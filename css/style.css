@@ -72,12 +72,15 @@ p {
 .container-fluid.home {
   padding: 0;
   text-align: center;
+  background-color: #FFF3F3;
+  padding: 20px 0;
 }
 
 .home .jumbotron {
   display: inline-block;
-  background-color: #FFF3F3;
   height: 100vh;
+  margin: 0;
+  background-color: #FFF3F3;
 }
 
 .home .jumbotron img {
@@ -99,6 +102,60 @@ p {
 
 .home .actions p a:hover {
   text-decoration: none;
+}
+
+.info-credits {
+  text-align: left;
+  color: white;
+  position: relative;
+}
+
+.info-credits img.info {
+  width: 24px;
+  height: 24px;
+}
+
+.info-credits .info-text ul {
+  padding: 0;
+}
+
+.info-credits .info-text li {
+  text-align: left;
+  list-style: none;
+}
+
+.info-text span {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.info {
+  font-size: 24px;
+  color: #333;
+}
+
+.info:hover {
+  cursor: pointer;
+}
+
+.info-text p {
+  font-size: 14px;
+  color: #79b000;
+}
+
+.info-text span {
+  color: #79b000;
+}
+
+.info-text {
+  position: absolute;
+  background-color: black;
+  border-radius: 6px;
+  padding: 20px;
+  left: 3px;
+  bottom: 25px;
+  display: none;
 }
 
 /* ---------------- Media Queries ---------------- */

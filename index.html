@@ -6,6 +6,7 @@
 	  <link rel="shortcut icon" href="img/piggy.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
@@ -24,11 +25,39 @@
 					<a class="btn btn-primary btn-lg" href="#">Sign up</a>
 					<p><a href="1.html">Log in</a></p>
 				</div>
+
+				<div class="info-credits">
+					<img src="img/info-circle.svg" class="info">
+					<div class="info-text">
+						<span>Deloitte Digital for SheHacks 2017</span>
+						<p>We are:</p>
+						<ul>
+							<li>Swetha Bayyarapu</li>
+							<li>Bev Goh</li>
+							<li>Duyen Ho</li>
+							<li>Mal Parkinson</li>
+							<li>Nathalia Tan</li>
+						</ul>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
 		<a class="credit" href='http://www.freepik.com/free-vector/piggy-bank-background-of-business_1189282.htm'>Vectors / images by Freepik</a>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		// Hide the info text
+			$('.info').hover(function(){
+				$('.info-text').fadeIn('slow');
+				$('.info-text').hover(function() {
+					$('.info-text').show();
+				})
+				$('.info-text').mouseleave(function(){
+					$('.info-text').fadeOut('slow');
+				})
+			});
+		</script>
 	</body>
 </html>
