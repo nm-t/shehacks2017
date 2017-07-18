@@ -2,6 +2,15 @@
   margin: 40px 0;
 }
 
+.options h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 20px auto;
+  line-height: 1.25;
+  width: 200px;
+}
+
 .option {
   text-align: center;
 }
@@ -13,6 +22,7 @@
 
 .option img:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .search {
@@ -21,4 +31,9 @@
 
 .search .input-group {
   margin: 50px 0;
+}
+
+img.no-change:hover {
+  opacity: 1;
+  cursor: default;
 }

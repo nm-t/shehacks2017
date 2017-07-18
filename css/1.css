@@ -17,5 +17,11 @@ button {
   text-align: center;
 }
 
-.profile-details {
+.profile-details p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.profile-details p span {
+  font-weight: bold;
 }

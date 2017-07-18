@@ -10,34 +10,29 @@ $(document).ready(function() {
     }
   });
 
-  //Added, set initial value.
-  $("#amount").val(0);
-  $("#duration").val(0);
-  $("#amount-label").text(0);
-  $("#duration-label").text(0);
+  // Added, set initial value.
+  $("#cups").val(0);
+  $("#permonth").val(0);
+  $("#cups-label").text(0);
+  $("#permonth-label").text(0);
 
   update();
 });
 
-//changed. now with parameter
+// Changed. Now with parameter
 function update(slider, val) {
-  //changed. Now, directly take value from ui.value. if not set (initial, will use current value.)
-  var $amount = slider == 1 ? val : $("#amount").val();
-  var $duration = slider == 2 ? val : $("#duration").val();
+  // Changed. Now, directly take value from ui.value. If not set (initial, will use current value.)
+  var $cups = slider == 1 ? val : $("#cups").val();
+  var $permonth = slider == 2 ? val : $("#permonth").val();
 
-  /* commented
-  $amount = $( "#slider" ).slider( "value" );
-  $duration = $( "#slider2" ).slider( "value" );
-   */
+  $peryear = ($cups * 52);
+  $("#cups").val($cups);
+  $("#cups-label").text($cups * 5);
+  $("#permonth").val($permonth);
+  $("#permonth-label").text(Math.ceil($cups * 5 * 4.3));
+  $("#peryear").val($peryear);
+  $("#peryear-label").text($peryear);
 
-  $total = ($amount * 365);
-  $("#amount").val($amount);
-  $("#amount-label").text($amount * 4);
-  $("#duration").val($duration);
-  $("#duration-label").text($amount * 30);
-  $("#total").val($total);
-  $("#total-label").text($total);
-
-  $('#slider a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> ' + $amount + ' <span class="glyphicon glyphicon-chevron-right"></span></label>');
-  $('#slider2 a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> ' + $duration + ' <span class="glyphicon glyphicon-chevron-right"></span></label>');
+  $('#slider a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> ' + $cups + ' <span class="glyphicon glyphicon-chevron-right"></span></label>');
+  $('#slider2 a').html('<label><span class="glyphicon glyphicon-chevron-left"></span> ' + $permonth + ' <span class="glyphicon glyphicon-chevron-right"></span></label>');
 }

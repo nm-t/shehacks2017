@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  	<meta charset="utf-8">
     <title>Feeling Financy</title>
     <link rel="shortcut icon" href="img/piggy.ico" type="image/x-icon">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <a class="logo" href="index.html">
         <img src="img/feeling-financy-logo.svg">
-        Feeling Financy
+        <span>Feeling Financy</span>
         </a>
       </div>
     </nav>
+
     <div class="container theme-showcase" role="main">
       <h2 align="center">Hell yeah!</h2>
       <div class="col-md-8 option">
         <script src="http://code.highcharts.com/highcharts.js"></script>
       </div>
     </div>
+
+    <a class="credit" href='http://www.freepik.com/free-vector/piggy-bank-background-of-business_1189282.htm'>Vectors / images by Freepik</a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <div id="container" style="width:100%; height:400px;"></div>
@@ -40,7 +46,7 @@
                text: 'Savings ($)'
            }
        },
-       xAxis: {        
+       xAxis: {
            type: 'datetime',
            labels: {
                formatter: function() {

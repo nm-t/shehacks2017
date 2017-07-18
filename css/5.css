@@ -73,7 +73,7 @@ h4.great {
 	margin: 0 0 25px -60px;
 	padding: 7px 15px;
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 	border-radius: 5px;
 	display: inline-block;
@@ -103,7 +103,7 @@ h4.great {
 }
 
 .price-slider {
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 }
 
 .price-slider span {
@@ -175,4 +175,8 @@ hr.style {
     border: 0;
     border-bottom: 1px dashed #ccc;
     background: #999;
+}
+
+label.control-label {
+	font-size: 18px;
 }

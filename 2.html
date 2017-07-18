@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Feeling Financy</title>
+		<link rel="shortcut icon" href="img/piggy.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/2.css" rel="stylesheet">
+	</head>
 
-<head>
-	<title>Feeling Financy</title>
-	<link rel="shortcut icon" href="img/piggy.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/2.css" rel="stylesheet">
-</head>
-
-<body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<a class="logo" href="index.html">
-			<img src="img/feeling-financy-logo.svg">
-			Feeling Financy
-			</a>
-		</div>
-	</nav>
-	<div class="container theme-showcase" role="main">
-		<h2 align="center">What is your goal?</h2>
-
-		<div class="row options">
-			<div class="col-xs-4 option">
-				<img src="img/travel.jpg" class="shake"><br/>
-				<p>Travel</p>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<a class="logo" href="index.html">
+				<img src="img/feeling-financy-logo.svg">
+				<span>Feeling Financy</span>
+				</a>
 			</div>
-			<div class="col-xs-4 option">
-				<img src="img/invest.jpg" class="shake"><br/>
-				<p>Invest</p>
-			</div>
-			<div class="col-xs-4 option">
-				<img src="img/mortgage.jpg" class="shake"><br/>
-				<p>Mortgage</p>
-			</div>
-		</div>
+		</nav>
+		<div class="container theme-showcase" role="main">
+			<h2 align="center">What is your goal?</h2>
 
-		<div class="row search">
-			<div class="col-xs-6 col-xs-offset-3 option">
-				<img src="img/question.png" class="shake">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="Search for... New Ferrari">
-					<span class="input-group-btn">
-						<a href="3.html" class="btn btn-default">Go!</a>
-					</span>
+			<div class="row options">
+				<div class="col-xs-4 option">
+					<a href="3.html">
+						<img src="img/travel.jpg" class="shake"><br/>
+					</a>
+					<h4>Travel</h4>
+				</div>
+				<div class="col-xs-4 option">
+					<a href="3.html">
+						<img src="img/invest.jpg" class="shake"><br/>
+					</a>
+					<h4>Invest</h4>
+				</div>
+				<div class="col-xs-4 option">
+					<a href="3.html">
+						<img src="img/mortgage.jpg" class="shake"><br/>
+					</a>
+					<h4>Mortgage</h4>
 				</div>
 			</div>
 
-		</div>
-	</div>
+			<div class="row search">
+				<div class="col-xs-6 col-xs-offset-3 option">
+					<img src="img/question.png" class="no-change">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for... New Ferrari">
+						<span class="input-group-btn">
+							<a href="3.html" class="btn btn-default">Go!</a>
+						</span>
+					</div>
+				</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
-	<script>
-		$(function(){
-	   	$(".shake").hover(function() {
-	         $(this).effect("shake", {direction: "up", times: 2, distance: 5}, 500);
-	   });
-		});
-	</script>
-</body>
+			</div>
+		</div>
+
+		<a class="credit" href='http://www.freepik.com/free-vector/piggy-bank-background-of-business_1189282.htm'>Vectors / images by Freepik</a>
+		<a class="credit" href='http://www.freepik.com/free-vector/travel-background_770523.htm'>Vectors / images by Freepik</a>
+		<a class="credit" href='http://www.freepik.com/free-vector/watering-the-coin-plant_1076121.htm'>Vectors / images by Freepik</a>
+		<a class="credit" href='http://www.freepik.com/free-vector/investing-money-in-a-house_894727.htm'>Vectors / images by Freepik</a>
+		<a class="credit" href='http://www.freepik.com/free-vector/cartoon-of-a-businessman-with-a-question-mark_976434.htm'>Vectors / images by Freepik</a>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script>
+			$(function(){
+		   	$(".shake").hover(function() {
+		         $(this).effect("shake", {direction: "up", times: 2, distance: 5}, 500);
+		   });
+			});
+		</script>
+	</body>
 </html>

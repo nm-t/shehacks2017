@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  	<meta charset="utf-8">
     <title>Feeling Financy</title>
     <link rel="shortcut icon" href="img/piggy.ico" type="image/x-icon">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/5.css" rel="stylesheet">
     <link href="css/3.css" rel="stylesheet">
   </head>
+
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <a class="logo" href="index.html">
           <img src="img/feeling-financy-logo.svg">
-          Feeling Financy
+          <span>Feeling Financy</span>
         </a>
       </div>
     </nav>
+
     <div class="container theme-showcase" role="main">
       <h2 align="center">How often do you buy coffee each week?</h2>
     </div>
+
     <div class="container">
       <div class="price-box">
         <form class="form-horizontal form-pricing" role="form">
+
           <div class="price-slider">
             <h4 class="great">Cups</h4>
             <div class="col-sm-12">
               <div id="slider"></div>
             </div>
           </div>
+
           <div class="price-form">
-            <p>Calculations based on $4 cups</p>
             <div class="form-group">
-              <label for="amount" class="col-sm-6 control-label">$ per week: </label>
+              <label for="cups" class="col-sm-6 control-label">$ per week: </label>
               <div class="col-sm-6">
-                <input type="hidden" id="amount" class="form-control">
-                <p class="price lead" id="amount-label"></p>
+                <input type="hidden" id="cups" class="form-control">
+                <p class="price lead" id="cups-label"></p>
                 <span class="price">.00</span>
               </div>
             </div>
+
             <div class="form-group">
-              <label for="duration" class="col-sm-6 control-label">$ per month: </label>
+              <label for="permonth" class="col-sm-6 control-label">$ per month: </label>
               <div class="col-sm-6">
-                <input type="hidden" id="duration" class="form-control">
-                <p class="price lead" id="duration-label"></p>
+                <input type="hidden" id="permonth" class="form-control">
+                <p class="price lead" id="permonth-label"></p>
                 <span class="price">.00</span>
               </div>
             </div>
+
             <hr class="style">
-            <div class="form-group total">
-              <label for="total" class="col-sm-6 control-label"><strong>$ per year </strong></label>
+            <div class="form-group peryear">
+              <label for="peryear" class="col-sm-6 control-label"><strong>$ per year: </strong></label>
               <div class="col-sm-6">
-                <input type="hidden" id="total" class="form-control">
-                <p class="price lead" id="total-label"></p>
+                <input type="hidden" id="peryear" class="form-control">
+                <p class="price lead" id="peryear-label"></p>
                 <span class="price">.00</span>
-                <p>... That's a lot of coffee.</p>
+                <p>... That's a lot of coffee</p>
               </div>
             </div>
+            <span class="fine-print">* Calculations based on medium soy flat whites</span>
           </div>
+
           <div class="form-group">
-            <div class="col-sm-12">
-              <a href="6.html" class="btn btn-primary btn-lg btn-block">Next <span class="glyphicon glyphicon-chevron-right pull-right" style="padding-right: 10px;"></span></a>
+            <div class="col-sm-12" style="text-align: right;">
+              <a href="6.html" class="btn btn-primary btn-lg">Next <span class="glyphicon glyphicon-chevron-right" style="padding-left: 10px;"></span></a>
             </div>
           </div>
+
         </form>
       </div>
     </div>
+
+    <a class="credit" href='http://www.freepik.com/free-vector/piggy-bank-background-of-business_1189282.htm'>Vectors / images by Freepik</a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/5.js"></script>
   </body>
 </html>

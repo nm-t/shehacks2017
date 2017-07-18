@@ -2,15 +2,35 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-body.index-body {
-  background-color: #FFF3F3;
-}
-
 th, td {
   padding: 15px;
 }
 
-/* Navigation */
+h1,
+h2,
+h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.credit {
+  display: none;
+}
+
+/* ---------------- Navigation ---------------- */
 .navbar {
   border-radius: 0;
 }
@@ -25,9 +45,10 @@ th, td {
 }
 
 .navbar .container-fluid a {
-  font-size: 26px;
+  font-size: 24px;
   cursor: pointer;
   color: #253039;
+  font-family: 'Raleway', sans-serif;
 }
 
 .navbar .container-fluid a:hover {
@@ -43,24 +64,20 @@ th, td {
   margin: 0 10px 0 20px;
 }
 
-h2 {
-  margin-bottom: 20px;
+.logo span {
+  font-weight: 600;
 }
 
-p {
-  font-size: 16px;
-  margin: 20px 0;
-}
-
-/* Homepage */
+/* ---------------- Homepage ---------------- */
 .container-fluid.home {
   padding: 0;
-  /*text-align: center;*/
+  text-align: center;
 }
 
 .home .jumbotron {
   display: inline-block;
   background-color: #FFF3F3;
+  height: 100vh;
 }
 
 .home .jumbotron img {
@@ -69,7 +86,11 @@ p {
 
 .home .subtext {
   text-align: left;
-  padding: 0 100px;
+  padding: 30px 100px 5px;
+}
+
+.home .subtext p {
+  font-size: 18px;
 }
 
 .home .actions {
@@ -80,8 +101,9 @@ p {
   text-decoration: none;
 }
 
+/* ---------------- Media Queries ---------------- */
 @media (max-width: 991px) {
   .home .subtext {
-    padding: 0 50px;
+    padding: 30px 50px 5px;
   }
 }
