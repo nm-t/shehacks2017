@@ -1,6 +1,9 @@
 $(document).ready(function() {
-  var goal = 0;
 
+  // initialise datepicker with today's date
+  $("#date").datepicker("setDate", new Date);
+
+  // initialise sliders
   $("#slider").slider({
     animate: true,
     value: 1,
@@ -8,7 +11,7 @@ $(document).ready(function() {
     max: 1000,
     step: 10,
     slide: function(event, ui) {
-      update(1, ui.value); // Changed
+      update(1, ui.value);
     }
   });
 
@@ -19,65 +22,68 @@ $(document).ready(function() {
     max: 500,
     step: 1,
     slide: function(event, ui) {
-      update(2, ui.value); // Changed
+      update(2, ui.value);
     }
   });
 
-  // Added, set initial value.
+  // set totals
   $("#amount").val(0);
   $("#spend").val(0);
   $("#amount-label").text(0);
   $("#spend-label").text(0);
 
-  getGoal();
-  // getDate();
-  // getDateToday();
   update();
+
 });
 
-
+// ------------ functions ------------
 function getGoal() {
   $('#goal').on('input', function() {
     goal = this.value;
-    console.log(goal);
+    console.log(goal)
   });
 }
 
-// TODO: Use Moment.js to work out duration and factor into calculations
-// function getDate() {
-//   var date = $('#date').val();
-//   console.log(date);
-// }
-//
-// function getDateToday() {
-//   var today = new Date();
-//   var dd = today.getDate();
-//   var mm = today.getMonth() + 1; // January is 0!
-//   var yyyy = today.getFullYear();
-//
-//   if (dd < 10) {
-//       dd = '0' + dd
-//   }
-//
-//   if (mm < 10) {
-//       mm = '0' + mm
-//   }
-//
-//   today = mm + '/' + dd + '/' + yyyy;
-//   console.log(today);
-// }
+function calculateWeeks() {
+  // debugger;
+  var today = new Date();
+  var date = today;
+  var weeks = 1;
+  console.log('calc week init', weeks);
 
-// Changed. Now with parameter
+  $('#date').on('focusout', function() {
+
+    date = $('#date').val();
+    console.log('date', date);
+
+    var newDate = new Date(date);
+    console.log('date', date);
+
+    var dif = Math.round(newDate - today);
+    weeks = Math.round(dif/1000/60/60/24/7) + 1;
+
+  });
+
+  console.log('calc weeks', weeks);
+  return weeks
+}
+
 function update(slider, val) {
   // Changed. Now, directly take value from ui.value. If not set (initial, will use current value.)
   var $amount = slider == 1 ? val : $("#amount").val();
   var $spend = slider == 2 ? val : $("#spend").val();
 
+  var goal = getGoal();
+  var weeks = calculateWeeks();
+
+  console.log(weeks, 'weeks');
+
   $total = "$" + ($amount * $spend);
   $("#amount").val($amount);
   $("#amount-label").text($amount - $spend);
   $("#spend").val($spend);
-  $("#spend-label").text(Math.ceil(($amount - $spend) / 5));
+  // TODO: spend amount needs to update dynamically according to goal and weeks value
+  $("#spend-label").text(Math.ceil(($amount - $spend) / weeks));
   $("#total").val($total);
   $("#total-label").text($total);
 

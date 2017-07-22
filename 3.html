@@ -7,12 +7,10 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link id="bsdp-css" href="bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 		<link href="css/5.css" rel="stylesheet">
 		<link href="css/3.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<link id="bsdp-css" href="bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
-		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 	</head>
 
 	<body>
@@ -50,7 +48,7 @@
 					<div>
 						<h4>By when?</h4>
 						<div class="input-group date" data-provide="datepicker">
-							<input id="date" type="text" class="form-control">
+							<input id="date" class="form-control">
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-th"></span>
 							</div>
@@ -74,14 +72,14 @@
 					  <div class="form-group">
 					    <label for="amount" class="col-sm-6 control-label">Okay! You could save this amount each week:</label>
 					    <div class="col-sm-6">
-					      <input type="hidden" id="amount" class="form-control">
-					      <p class="price lead" id="amount-label"></p>
+					      <input id="amount" type="hidden" class="form-control">
+					      <p id="amount-label"class="price lead"></p>
 					      <span class="price">.00</span>
 					    </div>
 					    <label for="spend" class="col-sm-6 control-label">You need to save this amount each week to reach your goal:</label>
 					    <div class="col-sm-6">
-					      <input type="hidden" id="spend" class="form-control">
-					      <p class="price lead" id="spend-label"></p>
+					      <input id="spend" type="hidden" class="form-control">
+					      <p id="spend-label"class="price lead"></p>
 					      <span class="price">.00</span>
 					    </div>
 					  </div>
@@ -99,6 +97,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 		<script src="js/3.js"></script>
 	</body>
 </html>
